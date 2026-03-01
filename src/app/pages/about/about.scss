@@ -1,0 +1,344 @@
+/* أنماط صفحة About */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* رأس الصفحة */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+
+  h1 {
+    font-size: 3rem;
+    color: white;
+    -webkit-text-fill-color: unset;
+    background: unset;
+    -webkit-background-clip: unset;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+}
+
+/* قسم المعلومات */
+.about-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: #333;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* قسم المهارات */
+.skills-section {
+  margin-bottom: 2rem;
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* بطاقة المهارة */
+.skill-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      color: #666;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* قسم الخبرة */
+.experience-section {
+  margin-bottom: 2rem;
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: #667eea;
+
+      @media (max-width: 768px) {
+        left: 20px;
+      }
+    }
+  }
+}
+
+/* عنصر الخط الزمني */
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 60px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: #667eea;
+    }
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .timeline-marker {
+    width: 16px;
+    height: 16px;
+    background: #667eea;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px #667eea;
+
+    @media (max-width: 768px) {
+      left: 12px;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .timeline-content {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .company {
+      color: #999;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .date {
+      color: #999;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* قسم التعليم */
+.education-section {
+  margin-bottom: 2rem;
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* بطاقة التعليم */
+.education-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border-top: 4px solid #667eea;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .institution {
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .year {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+}
+
+/* الاستجابة */
+@media (max-width: 768px) {
+  .about-header {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
+
+  .skill-card,
+  .education-card {
+    padding: 1rem;
+  }
+}

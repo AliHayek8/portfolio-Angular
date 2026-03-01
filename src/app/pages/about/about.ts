@@ -1,0 +1,145 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  standalone: true,
+  selector: 'app-about',
+  imports: [CommonModule],
+  template: `
+    <div class="about-container">
+      <div class="about-header">
+        <h1>About Me</h1>
+        <p class="subtitle">Get to know my story and experience</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-section">
+          <h2>Who Am I?</h2>
+          <p>
+            I'm a web developer specialized in building modern and fast web applications using Angular and TypeScript.
+            I have over 5 years of experience in web development and working with various technologies.
+          </p>
+          <p>
+            In addition to web development, I'm specialized in Machine Learning and developing ML models
+            using Python and TensorFlow.
+          </p>
+        </div>
+
+        <div class="skills-section">
+          <h2>Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Frontend Development</h3>
+              <ul>
+                <li>Angular 21</li>
+                <li>TypeScript</li>
+                <li>HTML5 & CSS3</li>
+                <li>SCSS/SASS</li>
+                <li>Kendo UI</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3>Backend Development</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>Firebase</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3>Machine Learning</h3>
+              <ul>
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>Scikit-learn</li>
+                <li>Data Analysis</li>
+                <li>Neural Networks</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3>Other Tools</h3>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Figma</li>
+                <li>Jira</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-section">
+          <h2>Work Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Senior Web Developer</h3>
+                <p class="company">Advanced Technology Company</p>
+                <p class="date">2022 - Present</p>
+                <p class="description">
+                  Leading web development team and developing advanced Angular applications with Kendo UI
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Web Developer</h3>
+                <p class="company">Digital Solutions Company</p>
+                <p class="date">2020 - 2022</p>
+                <p class="description">
+                  Developing web applications using Angular and TypeScript, working with a multicultural team
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Junior Developer</h3>
+                <p class="company">Creative Web Studio</p>
+                <p class="date">2019 - 2020</p>
+                <p class="description">
+                  Developing websites using HTML5, CSS3, and JavaScript
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-section">
+          <h2>Education</h2>
+          <div class="education-cards">
+            <div class="education-card">
+              <h3>Bachelor of Computer Science</h3>
+              <p class="institution">Technology University</p>
+              <p class="year">2019</p>
+            </div>
+
+            <div class="education-card">
+              <h3>Advanced Angular Course</h3>
+              <p class="institution">Udemy</p>
+              <p class="year">2021</p>
+            </div>
+
+            <div class="education-card">
+              <h3>Machine Learning Course</h3>
+              <p class="institution">Coursera</p>
+              <p class="year">2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  styleUrls: ['./about.scss']
+})
+export class AboutComponent {}

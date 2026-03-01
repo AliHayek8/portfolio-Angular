@@ -1,0 +1,372 @@
+/* استيراد سمة Kendo UI الافتراضية */
+@import '@progress/kendo-theme-default/dist/all.css';
+
+/* متغيرات الألوان الأساسية */
+:root {
+  --primary-color: #3f51b5;
+  --secondary-color: #2196f3;
+  --accent-color: #ff4081;
+  --text-color: #333333;
+  --light-bg: #f5f5f5;
+  --border-color: #e0e0e0;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+}
+
+/* إعادة تعيين الأنماط الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* أنماط الجسم الرئيسية */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* أنماط العناوين */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* أنماط الفقرات */
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* أنماط الروابط */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}
+
+/* أنماط الأزرار العامة */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* أنماط حقول الإدخال */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+/* أنماط الجداول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+
+  th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  tr:hover {
+    background-color: var(--light-bg);
+  }
+}
+
+/* أنماط البطاقات (Cards) */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin-bottom: 1.5rem;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+/* أنماط الحاويات */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.col-1 { flex: 0 0 8.333%; }
+.col-2 { flex: 0 0 16.666%; }
+.col-3 { flex: 0 0 25%; }
+.col-4 { flex: 0 0 33.333%; }
+.col-6 { flex: 0 0 50%; }
+.col-12 { flex: 0 0 100%; }
+
+/* أنماط الشبكة (Grid) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* أنماط الفاصل */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+/* أنماط التنبيهات */
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid;
+
+  &.alert-success {
+    background-color: #e8f5e9;
+    border-color: var(--success-color);
+    color: #2e7d32;
+  }
+
+  &.alert-warning {
+    background-color: #fff3e0;
+    border-color: var(--warning-color);
+    color: #e65100;
+  }
+
+  &.alert-error {
+    background-color: #ffebee;
+    border-color: var(--error-color);
+    color: #c62828;
+  }
+
+  &.alert-info {
+    background-color: #e3f2fd;
+    border-color: var(--secondary-color);
+    color: #1565c0;
+  }
+}
+
+/* أنماط الشريط العلوي (AppBar) */
+.k-appbar {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+
+  a {
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+  }
+}
+
+/* أنماط النماذج */
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  input, textarea, select {
+    width: 100%;
+  }
+}
+
+/* أنماط الأيقونات */
+.icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* أنماط الشريط الجانبي */
+.sidebar {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* أنماط التذييل */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+/* أنماط الاستجابة (Responsive) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    gap: 1rem;
+  }
+
+  .col {
+    min-width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .k-appbar a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  input, textarea, select {
+    padding: 0.5rem;
+  }
+}
+
+/* تأثيرات الانتقال السلس */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* إخفاء شريط التمرير في الأجهزة المحمولة */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+}

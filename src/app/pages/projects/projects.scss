@@ -1,0 +1,233 @@
+/* Projects Page Styles */
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+  }
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Loading State */
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 1.1rem;
+    color: #667eea;
+    margin: 0;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 2rem;
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+  border-radius: 4px;
+
+  p {
+    color: #c62828;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  p {
+    color: #999;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+/* Grid Wrapper */
+.grid-wrapper {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .projects-grid {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+/* Projects List */
+.projects-list {
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    border-left-color: #764ba2;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0;
+      color: #333;
+      font-size: 1.25rem;
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .project-id {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+    font-size: 0.95rem;
+  }
+
+  .project-footer {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+
+    button {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+
+      &.btn-small {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+
+      &.btn-secondary {
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+
+        &:hover {
+          background: #f5f7fa;
+          border-color: #764ba2;
+          color: #764ba2;
+        }
+      }
+    }
+  }
+}

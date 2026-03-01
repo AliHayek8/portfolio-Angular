@@ -1,0 +1,312 @@
+/* أنماط صفحة Home */
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* قسم البطل (Hero Section) */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  animation: slideInDown 0.8s ease-out;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    -webkit-text-fill-color: unset;
+    background: unset;
+    -webkit-background-clip: unset;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* أنماط الأزرار */
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+
+  &.btn-primary {
+    background-color: white;
+    color: #667eea;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  &.btn-large {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+  }
+}
+
+/* قسم المميزات (Features Section) */
+.features-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+/* بطاقة المميزة */
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #667eea;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+/* قسم الإحصائيات (Stats Section) */
+.stats-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+/* بطاقة الإحصائية */
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+  }
+}
+
+/* قسم الدعوة للعمل (CTA Section) */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  animation: slideInUp 0.8s ease-out;
+
+  h2 {
+    color: white;
+    -webkit-text-fill-color: unset;
+    background: unset;
+    -webkit-background-clip: unset;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-large {
+    background-color: white;
+    color: #667eea;
+  }
+}
+
+/* الرسوم المتحركة */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* الاستجابة للأجهزة المختلفة */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .features-section h2,
+  .stats-section h2,
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-large {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
