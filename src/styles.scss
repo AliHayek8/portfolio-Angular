@@ -1,7 +1,5 @@
-/* استيراد سمة Kendo UI الافتراضية */
 @import '@progress/kendo-theme-default/dist/all.css';
 
-/* متغيرات الألوان الأساسية */
 :root {
   --primary-color: #3f51b5;
   --secondary-color: #2196f3;
@@ -14,14 +12,12 @@
   --error-color: #f44336;
 }
 
-/* إعادة تعيين الأنماط الافتراضية */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* أنماط الجسم الرئيسية */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fafafa;
@@ -36,7 +32,6 @@ html, body {
   width: 100%;
 }
 
-/* أنماط العناوين */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: var(--primary-color);
@@ -55,13 +50,11 @@ h3 {
   font-size: 1.5rem;
 }
 
-/* أنماط الفقرات */
 p {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
 
-/* أنماط الروابط */
 a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -73,7 +66,6 @@ a {
   }
 }
 
-/* أنماط الأزرار العامة */
 button {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -93,7 +85,6 @@ button {
   }
 }
 
-/* أنماط حقول الإدخال */
 input, textarea, select {
   width: 100%;
   padding: 0.75rem;
@@ -115,7 +106,6 @@ input, textarea, select {
   }
 }
 
-/* أنماط الجداول */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -139,7 +129,6 @@ table {
   }
 }
 
-/* أنماط البطاقات (Cards) */
 .card {
   background-color: white;
   border-radius: 8px;
@@ -154,7 +143,6 @@ table {
   }
 }
 
-/* أنماط الحاويات */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -180,7 +168,6 @@ table {
 .col-6 { flex: 0 0 50%; }
 .col-12 { flex: 0 0 100%; }
 
-/* أنماط الشبكة (Grid) */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -188,14 +175,12 @@ table {
   margin-bottom: 2rem;
 }
 
-/* أنماط الفاصل */
 hr {
   border: none;
   border-top: 1px solid var(--border-color);
   margin: 2rem 0;
 }
 
-/* أنماط التنبيهات */
 .alert {
   padding: 1rem;
   margin-bottom: 1rem;
@@ -227,7 +212,6 @@ hr {
   }
 }
 
-/* أنماط الشريط العلوي (AppBar) */
 .k-appbar {
   background-color: var(--primary-color) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -245,7 +229,6 @@ hr {
   }
 }
 
-/* أنماط النماذج */
 .form-group {
   margin-bottom: 1.5rem;
 
@@ -261,7 +244,6 @@ hr {
   }
 }
 
-/* أنماط الأيقونات */
 .icon {
   display: inline-block;
   width: 1.5rem;
@@ -270,7 +252,6 @@ hr {
   vertical-align: middle;
 }
 
-/* أنماط الشريط الجانبي */
 .sidebar {
   background-color: var(--light-bg);
   padding: 1.5rem;
@@ -278,7 +259,6 @@ hr {
   border: 1px solid var(--border-color);
 }
 
-/* أنماط التذييل */
 footer {
   background-color: var(--primary-color);
   color: white;
@@ -295,7 +275,6 @@ footer {
   }
 }
 
-/* أنماط الاستجابة (Responsive) */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -350,12 +329,10 @@ footer {
   }
 }
 
-/* تأثيرات الانتقال السلس */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* إخفاء شريط التمرير في الأجهزة المحمولة */
 @media (max-width: 768px) {
   ::-webkit-scrollbar {
     width: 6px;

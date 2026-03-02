@@ -1,4 +1,3 @@
-/* أنماط صفحة Home */
 
 .home-container {
   width: 100%;
@@ -6,7 +5,6 @@
   margin: 0 auto;
 }
 
-/* قسم البطل (Hero Section) */
 .hero-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -56,7 +54,6 @@
   }
 }
 
-/* أنماط الأزرار */
 .btn {
   padding: 0.75rem 2rem;
   border: none;
@@ -103,7 +100,6 @@
   }
 }
 
-/* قسم المميزات (Features Section) */
 .features-section {
   margin-bottom: 3rem;
 
@@ -131,7 +127,6 @@
   }
 }
 
-/* بطاقة المميزة */
 .feature-card {
   background: white;
   padding: 2rem;
@@ -165,7 +160,6 @@
   }
 }
 
-/* قسم الإحصائيات (Stats Section) */
 .stats-section {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 3rem 2rem;
@@ -196,7 +190,6 @@
   }
 }
 
-/* بطاقة الإحصائية */
 .stat-card {
   background: white;
   padding: 2rem;
@@ -224,7 +217,6 @@
   }
 }
 
-/* قسم الدعوة للعمل (CTA Section) */
 .cta-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -259,7 +251,6 @@
   }
 }
 
-/* الرسوم المتحركة */
 @keyframes slideInDown {
   from {
     opacity: 0;
@@ -282,7 +273,6 @@
   }
 }
 
-/* الاستجابة للأجهزة المختلفة */
 @media (max-width: 768px) {
   .hero-section {
     padding: 2rem 1rem;

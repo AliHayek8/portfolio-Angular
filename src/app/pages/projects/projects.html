@@ -1,1 +1,47 @@
-<p>projects works!</p>
+<div class="projects-container">
+  <div class="projects-header">
+    <h1>My Projects</h1>
+    <p class="subtitle">A collection of projects I've worked on</p>
+  </div>
+
+  <div class="projects-content">
+    <ng-container *ngIf="projects$ | async as projects; else loading">
+
+      <!-- Kendo Grid -->
+      <div class="grid-wrapper">
+        <kendo-grid [data]="projects" [height]="500" class="projects-grid">
+          <kendo-grid-column field="id"          title="Project ID"   [width]="100"></kendo-grid-column>
+          <kendo-grid-column field="title"       title="Project Name" [width]="200"></kendo-grid-column>
+          <kendo-grid-column field="description" title="Description"></kendo-grid-column>
+        </kendo-grid>
+      </div>
+
+      <!-- Cards -->
+      <div *ngIf="projects.length > 0; else empty" class="projects-list">
+        <h2>Latest Projects</h2>
+        <div class="projects-cards">
+          <div class="project-card" *ngFor="let project of projects">
+            <div class="project-header">
+              <h3>{{ project.title }}</h3>
+              <span class="project-id">#{{ project.id }}</span>
+            </div>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-footer">
+              <button class="btn-small">View Details</button>
+              <button class="btn-small btn-secondary">Visit Site</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #empty>
+        <p class="empty-state">No projects found.</p>
+      </ng-template>
+
+    </ng-container>
+
+    <ng-template #loading>
+      <p class="loading-state">Loading projects...</p>
+    </ng-template>
+  </div>
+</div>

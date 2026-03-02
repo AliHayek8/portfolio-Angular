@@ -1,11 +1,9 @@
-/* أنماط صفحة About */
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* رأس الصفحة */
 .about-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -33,7 +31,6 @@
   }
 }
 
-/* قسم المعلومات */
 .about-section {
   background: white;
   padding: 2rem;
@@ -57,7 +54,6 @@
   }
 }
 
-/* قسم المهارات */
 .skills-section {
   margin-bottom: 2rem;
 
@@ -83,7 +79,6 @@
   }
 }
 
-/* بطاقة المهارة */
 .skill-card {
   background: white;
   padding: 1.5rem;
@@ -124,7 +119,6 @@
   }
 }
 
-/* قسم الخبرة */
 .experience-section {
   margin-bottom: 2rem;
 
@@ -155,7 +149,6 @@
   }
 }
 
-/* عنصر الخط الزمني */
 .timeline-item {
   margin-bottom: 2rem;
   position: relative;
@@ -241,7 +234,6 @@
   }
 }
 
-/* قسم التعليم */
 .education-section {
   margin-bottom: 2rem;
 
@@ -267,7 +259,6 @@
   }
 }
 
-/* بطاقة التعليم */
 .education-card {
   background: white;
   padding: 2rem;
@@ -301,7 +292,6 @@
   }
 }
 
-/* الاستجابة */
 @media (max-width: 768px) {
   .about-header {
     padding: 1.5rem;

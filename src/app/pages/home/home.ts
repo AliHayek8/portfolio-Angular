@@ -6,79 +6,8 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   selector: 'app-home',
   imports: [CommonModule, RouterLink],
-  template: `
-    <div class="home-container">
-      <div class="hero-section">
-        <h1>Welcome to My Portfolio</h1>
-        <p class="hero-subtitle">Web Developer Specialized in Angular & Machine Learning</p>
-        
-        <div class="hero-buttons">
-          <button class="btn btn-primary" routerLink="/projects">View My Projects</button>
-          <button class="btn btn-secondary">Download Resume</button>
-        </div>
-      </div>
-
-      <div class="features-section">
-        <h2>Key Skills</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <h3>Web Development</h3>
-            <p>Building modern and fast web applications using Angular and TypeScript</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">🤖</div>
-            <h3>Machine Learning</h3>
-            <p>Building intelligent ML models and applications using Python and TensorFlow</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Designing beautiful and user-friendly interfaces using Kendo UI</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">💻</div>
-            <h3>Full Stack Development</h3>
-            <p>Building complete applications from frontend to backend</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="stats-section">
-        <h2>Statistics</h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Completed Projects</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">Satisfied Clients</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Years of Experience</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Technical Support</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-section">
-        <h2>Ready to Work Together?</h2>
-        <p>Contact me now to get a special offer for new projects</p>
-        <button class="btn btn-large" routerLink="/contact">Get In Touch</button>
-      </div>
-    </div>
-  `,
+  templateUrl: './home.html'
+  ,
   styleUrls: ['./home.scss']
 })
 export class HomeComponent {}
